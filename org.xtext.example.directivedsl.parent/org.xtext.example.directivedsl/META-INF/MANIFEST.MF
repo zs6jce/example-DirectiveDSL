@@ -26,5 +26,6 @@ Export-Package: org.xtext.example.directivedsl.generator,
  org.xtext.example.directivedsl.scoping,
  org.xtext.example.directivedsl.validation,
  org.xtext.example.directivedsl,
- org.xtext.example.directivedsl.parser.antlr.internal
+ org.xtext.example.directivedsl.parser.antlr.internal,
+ org.xtext.example.directivedsl.parser.antlr.lexer
 Import-Package: org.apache.log4j

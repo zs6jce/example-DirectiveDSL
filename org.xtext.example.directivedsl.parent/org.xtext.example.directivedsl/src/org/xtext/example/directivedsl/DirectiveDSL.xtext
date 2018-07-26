@@ -37,5 +37,8 @@ CompilerDirectiveUNDEFINE:
 ;
 CompilerDirectiveEOF:
 	{CompilerDirectiveEOF}
-	'/EOF'
+	MAYBEEOF //Work Around as per: https://github.com/eclipse/xtext-core/issues/804
 ;
+
+//terminal MAYBEEOF : '/'('e'|'E')('o'|'O')('f'|'F');
+terminal MAYBEEOF : '/'('E'|'e')('O'|'o')('F'|'f');

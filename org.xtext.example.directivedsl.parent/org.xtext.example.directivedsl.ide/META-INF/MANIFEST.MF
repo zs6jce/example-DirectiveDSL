@@ -12,5 +12,6 @@ Require-Bundle: org.xtext.example.directivedsl,
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-10
 Export-Package: org.xtext.example.directivedsl.ide.contentassist.antlr,
- org.xtext.example.directivedsl.ide.contentassist.antlr.internal
+ org.xtext.example.directivedsl.ide.contentassist.antlr.internal,
+ org.xtext.example.directivedsl.ide.contentassist.antlr.lexer
 
