@@ -1,0 +1,41 @@
+grammar org.xtext.example.directivedsl.DirectiveDSL with org.eclipse.xtext.common.Terminals
+
+generate directiveDSL "http://www.xtext.org/example/directivedsl/DirectiveDSL"
+
+Model: {Model}
+	('**FREE')?
+	statements+=Statement*
+;
+Statement:
+	AbstractCompilerDirective	
+//	AbstractControl				|
+//	AbstractFileDescription		|
+//	AbstractDefinition			|
+//	AbstractCalculation
+;
+
+AbstractCompilerDirective:
+	CompilerDirectiveTITLE  		|
+	CompilerDirectiveEJECT  		|
+	CompilerDirectiveDEFINE			|
+	CompilerDirectiveUNDEFINE		|
+	CompilerDirectiveEOF
+;
+
+CompilerDirectiveTITLE:
+	'/TITLE' name=ID
+;
+CompilerDirectiveEJECT:
+	{CompilerDirectiveEJECT}
+	'/EJECT'
+;
+CompilerDirectiveDEFINE:
+	'/DEFINE' name=ID
+;
+CompilerDirectiveUNDEFINE:
+	'/UNDEFINE' name=ID
+;
+CompilerDirectiveEOF:
+	{CompilerDirectiveEOF}
+	'/EOF'
+;
